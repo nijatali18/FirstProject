@@ -2,7 +2,7 @@
 
 public class Helper
 {
-    public static T Method5<T>()
+    public  T Method5<T>()
     {
         object result;
         Type type = typeof(T);
@@ -20,24 +20,31 @@ public class Helper
             Console.WriteLine();
         }
           Console.ForegroundColor = ConsoleColor.Yellow;
-    l1:  
+       l1: Method2("Secim edin:");
         if (!Enum.TryParse(type, Console.ReadLine(), true, out result))
         {
-            
+           
+            Method1("Yalnis Id secdiz zehmet olmasa menyudan secin !");
             goto l1;
         }
         if (!Enum.IsDefined(type, result))
         {
-           
+            Method1("Yalnis Id secdiz zehmet olmasa menyudan secin !");
             goto l1;
         }
-        
-        Thread.Sleep(2000);
-       
-        Thread.Sleep(2000);
-        Console.Clear();
-        Console.ForegroundColor = ConsoleColor.White;
         return (T)result;
+    }
+    public void Method1(string name)
+    {
+        var color = Console.ForegroundColor;
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.Write(" ".PadLeft(20, ' '));
+        for (int i = 0; i < name.Length; i++)
+        {
+            Console.Write(name[i]);
+            Thread.Sleep(5);
+        }
+        Console.WriteLine();
     }
     public void Method2(string info)
     {
@@ -49,31 +56,5 @@ public class Helper
             Console.Write(info[i]);
             Thread.Sleep(5);
         }
-    }
-    public void Method1(string info)
-    {
-        var color = Console.ForegroundColor;
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.Write(" ".PadLeft(20, ' '));
-        for (int i = 0; i < info.Length; i++)
-        {
-            Console.Write(info[i]);
-            Thread.Sleep(5);
-        }
-        Console.WriteLine();
-    }
-    public void Method4(string info)
-    {
-        var color = Console.ForegroundColor;
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.Write(" ".PadLeft(20, ' '));
-        for (int i = 0; i < info.Length; i++)
-        {
-            Console.Write(info[i]);
-            Thread.Sleep(5);
-        }
-        Thread.Sleep(3000);
-        Console.Clear();
-        Console.WriteLine();
     }
 }

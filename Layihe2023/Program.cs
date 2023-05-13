@@ -9,7 +9,8 @@ public class Program
         //string data = employee.ToString();
 
         //Console.WriteLine(data);
-        Helper.Method5<Menu>();
+        Helper M1 = new Helper();
+       byte number=(byte)M1.Method5<Menu>();
     }
 
 }
