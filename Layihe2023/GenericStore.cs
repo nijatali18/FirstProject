@@ -10,15 +10,24 @@ public class GenericStore<T> : IEnumerable<T>
 
     public int Id => throw new NotImplementedException();
 
-    public void AddEmployee(T item)
+    public void CreateAdd(T item)
     {
         int length = data.Length;
         Array.Resize(ref data, length + 1);
         data[length] = item;
     }
-    public T UpdateDepartment(T id)
+    public void AddEmployee()
     {
-        var data1 = Array.Find(data,  item=> item.Id == id);
+
+    }
+    public void GetAllDepartment()
+    {
+
+    }
+
+    public T UpdateDepartment(T name)
+    {
+        var data1 = Array.Find(data,  item=> item.Name ==name);
 
         return data1;
     }

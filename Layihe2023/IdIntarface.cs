@@ -2,5 +2,5 @@
 
 public interface IdIntarface
 {
-    public int Id { get; set; }
+    public string Name { get; }
 }

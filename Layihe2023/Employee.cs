@@ -7,7 +7,7 @@ public class Employee:IEquatable<Employee>, IdIntarface
     public int Salary { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
-    public int DepartmentId { get; set; }
+    public int DepartmentId { get; }
 
     public int Id => throw new NotImplementedException();
 
@@ -29,5 +29,6 @@ public class Employee:IEquatable<Employee>, IdIntarface
         this.Salary = salary;
         this.Name = name;
         this.Surname = surname;
+        
     }
 }
