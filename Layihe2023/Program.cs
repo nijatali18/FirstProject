@@ -1,10 +1,15 @@
-﻿namespace Layihe2023
+﻿namespace Layihe2023;
+
+internal class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        Employee employee = new Employee(123456, "Nicat", "Aliyev");
+
+        string data = employee.ToString();
+
+        Console.WriteLine(data);
+
     }
+
 }
