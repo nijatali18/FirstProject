@@ -1,6 +1,6 @@
 ﻿namespace Layihe2023;
 
-public class Company : IEquatable<Department>, IdIntarface
+public  class Company : IEquatable<Company>, IdIntarface
 {
     public int Id { get; }
     public string Name { get; set; }
@@ -11,7 +11,9 @@ public class Company : IEquatable<Department>, IdIntarface
         this.Id = counter;
     }
    
-    public bool Equals(Department? other)
+ 
+
+    public bool Equals(Company? other)
     {
         throw new NotImplementedException();
     }

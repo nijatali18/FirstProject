@@ -54,6 +54,28 @@ public class Helper
         for (int i = 0; i < info.Length; i++)
         {
             Console.Write(info[i]);
+            Thread.Sleep(10);
+        }
+    }
+    public void Method(string info)
+    {
+        var color = Console.ForegroundColor;
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.Write(" ".PadLeft(20, ' '));
+        for (int i = 0; i < info.Length; i++)
+        {
+            Console.Write(info[i]);
+            Thread.Sleep(5);
+        }
+        Console.WriteLine();
+    }
+    public void Method6(string info)
+    {
+        var color = Console.ForegroundColor;
+        Console.ForegroundColor = ConsoleColor.DarkBlue;
+        for (int i = 0; i < info.Length; i++)
+        {
+            Console.Write(info[i]);
             Thread.Sleep(5);
         }
     }
