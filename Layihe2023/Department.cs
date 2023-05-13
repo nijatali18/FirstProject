@@ -6,10 +6,10 @@ public class Department:IEquatable<Department>,IdIntarface
 {
     public int DepartmentId { get; }
     public string Name { get; set; }
-    public int EmployeeLimit { get; set; }
+    public int Employeelimit { get; set; }
     public int CompanyId { get; set; }
 
-    public int Id => throw new NotImplementedException();
+   // public int Id => throw new NotImplementedException();
 
     public override string ToString()
     {

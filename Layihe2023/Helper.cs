@@ -2,7 +2,7 @@
 
 public class Helper
 {
-    public  T Method5<T>()
+    public T Method5<T>()
     {
         object result;
         Type type = typeof(T);
@@ -19,11 +19,11 @@ public class Helper
             }
             Console.WriteLine();
         }
-          Console.ForegroundColor = ConsoleColor.Yellow;
-       l1: Method2("Secim edin:");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+    l1: Method2("Secim edin:");
         if (!Enum.TryParse(type, Console.ReadLine(), true, out result))
         {
-           
+
             Method1("Yalnis Id secdiz zehmet olmasa menyudan secin !");
             goto l1;
         }
@@ -79,4 +79,17 @@ public class Helper
             Thread.Sleep(5);
         }
     }
+    public int MethodInt(string info)
+    {
+        int digt;
+    l1: Method6(info);
+        if (!int.TryParse(Console.ReadLine(), out digt) || digt <= 0)
+        {
+            Method("Herif ve ya menfi eded daxil etmeyin !");
+            goto l1;
+        }
+        return digt;
+    }
 }
+
+

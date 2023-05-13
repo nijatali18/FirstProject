@@ -9,7 +9,7 @@ public class Employee:IEquatable<Employee>, IdIntarface
     public string Surname { get; set; }
     public int DepartmentId { get; }
 
-    public int Id => throw new NotImplementedException();
+    //public int Id => throw new NotImplementedException();
 
     public override string ToString()
     {
@@ -22,13 +22,9 @@ public class Employee:IEquatable<Employee>, IdIntarface
     }
 
     static int count = 0;
-    public Employee(int salary, string name, string surname)
+    public Employee()
     {
         count++;
         this.EmployeeId = count;
-        this.Salary = salary;
-        this.Name = name;
-        this.Surname = surname;
-        
     }
 }
