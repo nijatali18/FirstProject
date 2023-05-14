@@ -25,9 +25,15 @@ public class GenericStore<T> : IEnumerable<T>
 
     }
 
-    public T UpdateDepartment(T name)
+    public T UpdateDepartment(T id)
     {
-        var data1 = Array.Find(data,  item=> item.Name ==name);
+        var data1 = Array.Find(data,  item=> item.Id ==Id);
+
+        return data1;
+    }
+    public T DataId(int id) 
+    {
+        var data1 = Array.Find(data, item => item.Id== Id);
 
         return data1;
     }
@@ -42,12 +48,14 @@ public class GenericStore<T> : IEnumerable<T>
 
     public IEnumerator<T> GetEnumerator()
     {
-        throw new NotImplementedException();
+        foreach (var item in data)
+        {
+            yield return item;
+        }
     }
-
     IEnumerator IEnumerable.GetEnumerator()
     {
-        throw new NotImplementedException();
+        return this.GetEnumerator();
     }
 }
 

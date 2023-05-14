@@ -9,6 +9,7 @@ public class Program
     static GenericStore<Company> companies = new GenericStore<Company>();
     static GenericStore<Department> departments = new GenericStore<Department>();
     static GenericStore<Employee> employees = new GenericStore<Employee>();
+    Department department;
     static void Main(string[] args)
     {
         //Employee employee = new Employee(123456, "Nicat", "Aliyev");
@@ -92,6 +93,14 @@ public class Program
                         goto k2;
                     }
                     int salary = M1.MethodInt("Isci mayisini daxil et:");
+                    Console.WriteLine(" Departamentin Id asagidakilardan daxil ede bilersiz !");
+                    GetAllDeptametId();
+                    j1: int departamentid = M1.MethodInt("Departamentin Id daxil et:");
+                    if (!departments.Equals(departamentid))
+                    {
+                        Console.WriteLine("Departamet Id-ni yuxaridan secin !");
+                        goto j1;
+                    }
                     employees.CreateAdd(new Employee { Salary = salary, Name = name2, Surname = surname });
                     M1.Method("Melumat ugurla elave edildi.");
                     Thread.Sleep(2000);
@@ -107,7 +116,13 @@ public class Program
             }
 
         }
-
+        static void GetAllDeptametId()
+        {
+            foreach (var item in departments)
+            {
+                Console.WriteLine($"Book Id:{item.DepartmentId}");
+            }
+        }
 
 
         //switch (number)

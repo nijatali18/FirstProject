@@ -9,7 +9,9 @@ public class Employee:IEquatable<Employee>, IdIntarface
     public string Surname { get; set; }
     public int DepartmentId { get; }
 
-    //public int Id => throw new NotImplementedException();
+    public int Id => throw new NotImplementedException();
+
+   
 
     public override string ToString()
     {

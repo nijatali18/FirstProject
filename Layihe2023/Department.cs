@@ -9,7 +9,7 @@ public class Department:IEquatable<Department>,IdIntarface
     public int Employeelimit { get; set; }
     public int CompanyId { get; set; }
 
-   // public int Id => throw new NotImplementedException();
+    public int Id => throw new NotImplementedException();
 
     public override string ToString()
     {
