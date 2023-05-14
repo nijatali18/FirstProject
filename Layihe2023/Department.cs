@@ -18,7 +18,11 @@ public class Department:IEquatable<Department>,IdIntarface
 
     public bool Equals(Department? other)
     {
-        throw new NotImplementedException();
+        if (other == null) return false;
+
+        return this.DepartmentId == other.DepartmentId;
+
+
     }
 
     static int count = 0;

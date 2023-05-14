@@ -38,7 +38,7 @@ public class GenericStore<T> : IEnumerable<T>
 
 
 
-
+    public int Count { get { return data.Length; } set { } }
 
     public IEnumerator<T> GetEnumerator()
     {

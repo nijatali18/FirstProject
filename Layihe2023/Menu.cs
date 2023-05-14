@@ -2,9 +2,9 @@
 
 public enum Menu:byte
 {
-    AddEmployee=1,
+    CreateAdd=1, 
     UpdateDepartment,
     GetDepartmentEmployees,
     GetAllDepartment,
-    CreateAdd
+    AddEmployee,
 }

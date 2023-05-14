@@ -5,5 +5,6 @@ public enum Menyu2:byte
     AddCompany=1,
     AddDepartment,
     AddEmployee,
+    GoToMenyu,
 
 }
