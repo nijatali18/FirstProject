@@ -95,8 +95,6 @@ public class Program
                     int salary = M1.MethodInt("Isci mayisini daxil et:");
                     Console.WriteLine(" Departamentin Id asagidakilardan daxil ede bilersiz !");
                     GetAllDeptametId();
-                    //Console.Clear();
-                    ;
                 j1: int departamentid = M1.MethodInt("Departamentin Id daxil et:");
                     if (departments.Equals(departamentid))
                     {
@@ -104,12 +102,9 @@ public class Program
                         goto j1;
 
                     }
-                    Console.Clear();
-
                     employees.CreateAdd(new Employee { Salary = salary, Name = name2, Surname = surname });
                     M1.Method("Melumat ugurla elave edildi.");
                     Thread.Sleep(2000);
-                    Console.Clear();
                     goto l1;
 
                 case 4:
@@ -126,6 +121,7 @@ public class Program
             foreach (var item in departments)
             {
                 Console.WriteLine($"Book Id:{item.DepartmentId}");
+               
             }
         }
 
