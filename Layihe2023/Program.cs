@@ -15,8 +15,8 @@ public class Program
         //Employee employee = new Employee(123456, "Nicat", "Aliyev");
         //string data = employee.ToString();
         //Console.WriteLine(data);
-        departments.CreateAdd(new Department { Name = "samir", Employeelimit =2, CompanyId = 1});
-        companies.CreateAdd(new Company { Name = "samir"});
+        departments.CreateAdd(new Department { Name = "samir", Employeelimit = 2, CompanyId = 1 });
+        companies.CreateAdd(new Company { Name = "samir" });
         Helper M1 = new Helper();
     l6: M1.Method("Salam. Siz Menyu secmelisiz.");
         M1.Method("Menyudaki emeliyyatlara nezer yetrin.");
@@ -51,7 +51,7 @@ public class Program
                     {
                         M1.Method1("Sovbe elave etmek ucun ilk once sirket elave et.");
                         Thread.Sleep(2000);
-                        Console.Clear() ;
+                        Console.Clear();
                         goto case 1;
                     }
                     M1.Method2("Siz AddDepartment elave etmek isdediz !");
@@ -95,12 +95,17 @@ public class Program
                     int salary = M1.MethodInt("Isci mayisini daxil et:");
                     Console.WriteLine(" Departamentin Id asagidakilardan daxil ede bilersiz !");
                     GetAllDeptametId();
-                    j1: int departamentid = M1.MethodInt("Departamentin Id daxil et:");
-                    if (!departments.Equals(departamentid))
+                    //Console.Clear();
+                    ;
+                j1: int departamentid = M1.MethodInt("Departamentin Id daxil et:");
+                    if (departments.Equals(departamentid))
                     {
                         Console.WriteLine("Departamet Id-ni yuxaridan secin !");
                         goto j1;
+
                     }
+                    Console.Clear();
+
                     employees.CreateAdd(new Employee { Salary = salary, Name = name2, Surname = surname });
                     M1.Method("Melumat ugurla elave edildi.");
                     Thread.Sleep(2000);
@@ -125,74 +130,76 @@ public class Program
         }
 
 
-        //switch (number)
+        //employee { Salary = salary,Name = name, Surname = surname  });
+        //M1.Method("Melumat ugurla elave //switch (number)
         //{
-        //     Console.Clear();
-        //   l1: M1.Method1("Siz CreateAdd secimini secdiz !");
+        //    Console.Clear();
+        //l1: M1.Method1("Siz CreateAdd secimini secdiz !");
         //    byte data = (byte)M1.Method5<Menyu2>();
         //    case 1:
 
         //        if (data == 1)
-        //        {                   
-        //            Company company ;
-        //            M1.Method2("Siz AddCompany elave etmek isdediniz !");
-        //            Console.WriteLine();
-        //            M1.Method1("Asagidaki melumati doldurun !");                   
-        //            M1.Method6("Sirketin adi:");
-        //            string name=Console.ReadLine();
-        //            companies.CreateAdd(new Company { Name=name});
-        //            M1.Method("Melumat ugurla elave edildi.");                    
-        //            Thread.Sleep(3000);
-        //            Console.Clear();
-        //            goto l1;
-        //        }
-        //        else if (data == 2)
+        //    {
+        //        Company company;
+        //        M1.Method2("Siz AddCompany elave etmek isdediniz !");
+        //        Console.WriteLine();
+        //        M1.Method1("Asagidaki melumati doldurun !");
+        //        M1.Method6("Sirketin adi:");
+        //        string name = Console.ReadLine();
+        //        companies.CreateAdd(new Company { Name = name });
+        //        M1.Method("Melumat ugurla elave edildi.");
+        //        Thread.Sleep(3000);
+        //        Console.Clear();
+        //        goto l1;
+        //    }
+        //    else if (data == 2)
+        //    {
+        //        M1.Method2("Siz AddDepartment elave etmek isdediz !");
+        //        Console.WriteLine();
+        //        M1.Method1("Asagidaki melumatlari doldurun !");
+        //        M1.Method6("Iscinin adi:");
+        //        string name = Console.ReadLine();
+        //        int employeelimt = M1.MethodInt("Isci limitini daxil edin:");
+        //        int companyid = M1.MethodInt("Sirketin Id daxil edin:");
+        //        departments.CreateAdd(new Department { Name = name, Employeelimit = employeelimt, CompanyId = companyid });
+        //        M1.Method("Melumat ugurla elave edildi.");
+        //        Thread.Sleep(2000);
+        //        Console.Clear();
+        //        goto l1;
+        //    }
+        //    else if (data == 3)
+        //    {
+        //        M1.Method2("Siz  Employee elave etmek isdediz !");
+        //        Console.WriteLine();
+        //        M1.Method1("Asagidaki melumatlari doldurun !");
+        //    k1: M1.Method6("Iscinin adi:");
+        //        string name = Console.ReadLine();
+        //        if (string.IsNullOrWhiteSpace(name))
         //        {
-        //            M1.Method2("Siz AddDepartment elave etmek isdediz !");
-        //            Console.WriteLine();
-        //            M1.Method1("Asagidaki melumatlari doldurun !");
-        //            M1.Method6("Iscinin adi:");
-        //            string name = Console.ReadLine();
-        //            int employeelimt = M1.MethodInt("Isci limitini daxil edin:");
-        //            int companyid=M1.MethodInt("Sirketin Id daxil edin:");
-        //            departments.CreateAdd(new Department { Name = name, Employeelimit = employeelimt, CompanyId= companyid });
-        //            M1.Method("Melumat ugurla elave edildi.");
-        //            Thread.Sleep(2000);
-        //            Console.Clear();
-        //            goto l1;
+        //            Console.WriteLine("Bu xana bos buraxila bilmez !");
+        //            goto k1;
         //        }
-        //        else if (data==3)
-        //        {   
-        //            M1.Method2("Siz  Employee elave etmek isdediz !");
-        //            Console.WriteLine();
-        //            M1.Method1("Asagidaki melumatlari doldurun !");
-        //            k1: M1.Method6("Iscinin adi:");
-        //            string name = Console.ReadLine();
-        //            if (string.IsNullOrWhiteSpace(name))
-        //            {
-        //                Console.WriteLine("Bu xana bos buraxila bilmez !");
-        //                goto k1;
-        //            }
-        //            k2: M1.Method6("Soyadini:");
-        //            string surname=Console.ReadLine();
-        //            if (string.IsNullOrWhiteSpace(surname))
-        //            {
-        //                Console.WriteLine("Bu xana bos buraxila bilmez !");
-        //                goto k2;
-        //            }
-        //            int salary = M1.MethodInt("Isci mayisini daxil et:");                    
-        //            employees.CreateAdd(new Employee { Salary=salary,Name=name, Surname = surname  });
-        //            M1.Method("Melumat ugurla elave edildi.");
-        //            Thread.Sleep(2000);
-        //            Console.Clear();
-        //            goto l1; 
-        //        }
-        //        else if(data==4)
+        //    k2: M1.Method6("Soyadini:");
+        //        string surname = Console.ReadLine();
+        //        if (string.IsNullOrWhiteSpace(surname))
         //        {
-        //            goto l6;
+        //            Console.WriteLine("Bu xana bos buraxila bilmez !");
+        //            goto k2;
         //        }
+        //        int salary = M1.MethodInt("Isci mayisini daxil et:");
+        //        employees.CreateAdd(new Emedildi.");
+
+        //        Thread.Sleep(2000);
+        //        Console.Clear();
+        //        goto l1;
+        //    }
+        //    else if (data == 4)
+        //    {
+        //        goto l6;
+        //    }
         //    default: break;
 
+        //}
     }
 }
 
